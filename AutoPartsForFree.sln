@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPartsForFree.Web", "AutoPartsForFree.Web\AutoPartsForFree.Web.csproj", "{66F9BBF1-8FA9-4E53-BFFB-9FA6A6A4E9F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseMaster", "DatabaseMaster\DatabaseMaster.csproj", "{25D7CD28-D523-4596-93E7-AE7DE8C70164}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66F9BBF1-8FA9-4E53-BFFB-9FA6A6A4E9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66F9BBF1-8FA9-4E53-BFFB-9FA6A6A4E9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66F9BBF1-8FA9-4E53-BFFB-9FA6A6A4E9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66F9BBF1-8FA9-4E53-BFFB-9FA6A6A4E9F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A99A438D-57BD-460B-9A8D-4B1A03C3EB05}
+	EndGlobalSection
+EndGlobal

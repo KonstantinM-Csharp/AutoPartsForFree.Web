@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Загрузка прайс-листа";
+}
+
+<h2>Загрузка прайс-листа</h2>
+
+@using (Html.BeginForm("Download", "Price", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <button type="submit" class="btn btn-primary">Загрузить прайс-лист</button>
+}
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
