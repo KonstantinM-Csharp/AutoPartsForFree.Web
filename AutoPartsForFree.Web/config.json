@@ -1,0 +1,18 @@
+{
+  "EmailSettings": {
+    "host": "imap.mail.ru",
+    "port": 993,
+    "useSsl": true,
+    "username": "forever_021@mail.ru",
+    "password": "Amw3yFvfJjtePpsJNVdP",
+    "downloadFolder": "C:\\download",
+    "senderAddress": "kmerkulov21@gmail.com"
+  },
+    "ColumnModel": {
+      "nameVendorColumn": "Бренд",
+      "nameNumberColumn": "Каталожный номер",
+      "nameDescriptionColumn": "Описание",
+      "namePriceColumn": "Цена, руб.",
+      "nameCountColumn": "Наличие"
+    }
+}

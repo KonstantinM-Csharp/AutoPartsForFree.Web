@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPartsForFree.Web", "Aut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseMaster", "DatabaseMaster\DatabaseMaster.csproj", "{25D7CD28-D523-4596-93E7-AE7DE8C70164}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoPartsForFree.Tests", "AutoPartsForFree.Tests\AutoPartsForFree.Tests.csproj", "{A802871C-1898-4D16-95E9-68A9A82A322E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25D7CD28-D523-4596-93E7-AE7DE8C70164}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A802871C-1898-4D16-95E9-68A9A82A322E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A802871C-1898-4D16-95E9-68A9A82A322E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A802871C-1898-4D16-95E9-68A9A82A322E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A802871C-1898-4D16-95E9-68A9A82A322E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

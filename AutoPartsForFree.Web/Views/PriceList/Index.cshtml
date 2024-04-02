@@ -1,20 +1,33 @@
-﻿@{
-    ViewBag.Title = "Загрузка прайс-листа";
-}
+﻿<h1 style="text-align: center; margin: 20px;">
+    Приложение предназначено для скачивания прайса с почтового ящика и загрузки в базу.
+</h1>
+<p style="text-align: center; margin: 20px;">
+    Вы можете конфигурировать состав столбцов и данные почтового ящика с помощью json-файла. 
+    <br>По умолчанию данные загружаются с помощью файла config.json
+</p>
+<div style="text-align: center; margin-top: 20px;">
+    @if (ViewBag.ProgressMessage != null)
+    {
+        <div id="download-btn" class="alert alert-info">@ViewBag.ProgressMessage</div>
+    }
+</div>
 
-<h2>Загрузка прайс-листа</h2>
+<div style="text-align: center; margin-top: 20px;">
+    @using (Html.BeginForm("Download", "PriceList", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <button type="submit" class="btn btn-primary">Загрузить прайс-лист</button>
+        @Html.AntiForgeryToken()
+    }
+</div>
 
-@using (Html.BeginForm("Download", "Price", FormMethod.Post, new { enctype = "multipart/form-data" }))
-{
-    <button type="submit" class="btn btn-primary">Загрузить прайс-лист</button>
-}
+<div style="text-align: center; margin-top: 20px;">
+    @if (ViewBag.Message != null)
+    {
+        <div class="alert alert-success">@ViewBag.Message</div>
+    }
 
-@if (ViewBag.Message != null)
-{
-    <div class="alert alert-success">@ViewBag.Message</div>
-}
-
-@if (ViewBag.Error != null)
-{
-    <div class="alert alert-danger">@ViewBag.Error</div>
-}
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Error</div>
+    }
+</div>
