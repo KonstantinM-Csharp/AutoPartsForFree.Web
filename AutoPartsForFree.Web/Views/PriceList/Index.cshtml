@@ -1,33 +1,29 @@
-﻿<h1 style="text-align: center; margin: 20px;">
-    Приложение предназначено для скачивания прайса с почтового ящика и загрузки в базу.
-</h1>
-<p style="text-align: center; margin: 20px;">
-    Вы можете конфигурировать состав столбцов и данные почтового ящика с помощью json-файла. 
-    <br>По умолчанию данные загружаются с помощью файла config.json
-</p>
-<div style="text-align: center; margin-top: 20px;">
-    @if (ViewBag.ProgressMessage != null)
-    {
-        <div id="download-btn" class="alert alert-info">@ViewBag.ProgressMessage</div>
-    }
-</div>
+﻿
 
-<div style="text-align: center; margin-top: 20px;">
-    @using (Html.BeginForm("Download", "PriceList", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
-        <button type="submit" class="btn btn-primary">Загрузить прайс-лист</button>
-        @Html.AntiForgeryToken()
-    }
-</div>
+<div class="container-fluid text-center my-5 ">
 
-<div style="text-align: center; margin-top: 20px;">
-    @if (ViewBag.Message != null)
+    <h3 class="text-center">Прогресс работы программы:</h3>
+    <div class="container-fluid text-center my-5">
+        <div id="progress-container">
+            @ViewBag.Message
+        </div>
+    </div>
+  
+    @using (Html.BeginForm("DownloadCSVFileFromEmail", "PriceList", FormMethod.Post))
     {
-        <div class="alert alert-success">@ViewBag.Message</div>
+        <button id="downloadButton" class="btn bg-primary my-5">Загрузить файл</button>
     }
 
-    @if (ViewBag.Error != null)
-    {
-        <div class="alert alert-danger">@ViewBag.Error</div>
-    }
+@if (ViewBag.CustomErrors != null && ViewBag.CustomErrors.Count > 0)
+{
+    <div class="container-fluid text-center my-5">
+        <div id="progress-container">
+            <h4>Ошибки ковертации:</h4>
+            @foreach (var error in ViewBag.CustomErrors)
+            {
+                <li>@error</li>
+            }
+        </div>
+    </div>
+}
 </div>

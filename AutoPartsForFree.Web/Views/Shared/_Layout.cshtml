@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoPartsForFree</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AutoPartsForFree.Web.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center text-dark">
+            Приложение предназначено для скачивания прайса с почтового ящика и загрузки в базу.
+        </h1>
+        <p class="text-center my-5">
+            Вы можете конфигурировать состав столбцов и данные почтового ящика с помощью json-файла.
+            <br>По умолчанию данные загружаются с помощью файла config.json
+        </p>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

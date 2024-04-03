@@ -9,7 +9,14 @@ namespace AutoPartsForFree.Web.Infrastructure
 {
     public class CsvHelperService
     {
-        public static List<PriceItem> ParseCsvToPriceItem(string csvFilePath, ColumnModel columnModel, string delimiter)
+        /// <summary>
+        /// Конвертирует .csv файл в коллекцию  PriceItem.
+        /// </summary>
+        /// <param name="csvFilePath">Строка, содержащая путь к файлу .csv с данными.</param>
+        /// <param name="columnModel"></param>
+        /// <param name="delimiter"></param>
+        /// <returns></returns>
+        public static List<PriceItem> ParseCsvToPriceItem(string csvFilePath, ColumnModel columnModel, string delimiter, ref List<string> errors)
         {
             List<PriceItem> priceItems = new List<PriceItem>();
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
@@ -50,9 +57,8 @@ namespace AutoPartsForFree.Web.Infrastructure
                     }
                     catch (CsvHelper.TypeConversion.TypeConverterException ex)
                     {
-                        // Логирование сообщения об ошибке или другие действия по обработке исключения
-                        Console.WriteLine($"Ошибка преобразования: {ex.Text}, {ex.Context}");
-
+                        // Запись данных об ошибке конвертации
+                        errors.Add($"Ошибка преобразования: {ex.Text}, {ex.HResult}");
                         // Пропустить эту строку и перейти к следующей
                         continue;
                     }

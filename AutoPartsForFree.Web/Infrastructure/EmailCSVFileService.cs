@@ -7,7 +7,7 @@ using System.Net.Mail;
 
 namespace AutoPartsForFree.Web.Infrastructure
 {
-    public class EmailService
+    public class EmailCSVFileService
     {
         public static bool DownloadAttachmentFromEmail(ref EmailSettingsModel settings)
         {
@@ -45,18 +45,20 @@ namespace AutoPartsForFree.Web.Infrastructure
                             {
                                 csvAttachment.Content.DecodeTo(stream);
                             }
-                            Console.WriteLine($"Файл {fileName} скачан.");
                             return true;
                         }
                         else break;
                     }
-                    Console.WriteLine("Нет писем от указанного отправителя.");
                 }
                 client.Disconnect(true);
                 return false;
             }
         }
-
+        /// <summary>
+        /// Проверяет является ли файл .csv.
+        /// </summary>
+        /// <param name="attachment"></param>
+        /// <returns></returns>
         private static bool IsCsvAttachment(MimePart attachment)
         {
             var contentType = attachment.ContentType.MimeType.ToLower();
