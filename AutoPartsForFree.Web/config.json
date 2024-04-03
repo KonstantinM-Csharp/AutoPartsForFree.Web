@@ -1,10 +1,10 @@
 {
   "EmailSettings": {
-    "host": "imap.mail.ru",
+    "host": "imap.yandex.ru",
     "port": 993,
     "useSsl": true,
-    "username": "forever_021@mail.ru",
-    "password": "Amw3yFvfJjtePpsJNVdP",
+    "username": "testEmail993@yandex.ru",
+    "password": "tjtqcgwwtqbhpmjl",
     "downloadFolder": "C:\\download",
     "senderAddress": "kmerkulov21@gmail.com"
   },
